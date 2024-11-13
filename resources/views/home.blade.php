@@ -1,33 +1,33 @@
 <x-guest-layout>
-    <div class="flex flex-col items-center justify-center gap-y-8 p-6">
-        <h1 class="text-4xl font-semibold text-gray-800 dark:text-white text-center">Student Management System</h1>
-        
+    <div class="flex flex-col items-center justify-center gap-x-6">
+        <h1 class="text-2xl text-gray-800 dark:text-white">Student Management System</h1>
         @if (Route::has('login'))
-            <nav class="flex justify-center gap-6">
+            <nav class="flex justify-end flex-1 -mx-3">
                 @auth
                     <a
                         href="{{ url('/dashboard') }}"
-                        class="rounded-md px-6 py-3 text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300"
+                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
                     >
                         Dashboard
                     </a>
                 @else
                     <a
                         href="{{ route('login') }}"
-                        class="rounded-md px-6 py-3 text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300"
+                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
                     >
                         Log in
                     </a>
                     @if (Route::has('register'))
                         <a
                             href="{{ route('register') }}"
-                            class="rounded-md px-6 py-3 text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-300"
+                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
                         >
                             Register
                         </a>
                     @endif
                 @endauth
             </nav>
-        @endif
+            @endif
     </div>
+    
 </x-guest-layout>

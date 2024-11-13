@@ -18,4 +18,4 @@ Route::middleware('auth')->group(function () {
     Route::get('/students', Students\Index::class)->name('students.index');
 });
 
-require __DIR__.'/auth.php';
+Route::get('/students/create', Students\Create::class)->name('students.create');
